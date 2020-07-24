@@ -31,7 +31,7 @@
       >
     </v-app-bar>
 
-    <side-nav :permanent="false"/>
+    <side-nav :permanent="false" />
   </div>
 </template>
 
