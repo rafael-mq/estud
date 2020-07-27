@@ -7,7 +7,7 @@
     <SearchForm />
 
     <!-- Lista de professores -->
-    <TeacherList />
+    <TeacherList/>
     <!-- ... -->
     <!-- card info professor -->
     <!-- ... -->

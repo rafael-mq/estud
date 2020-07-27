@@ -2,21 +2,19 @@
   <div class="d-flex flex-wrap">
     <v-card
       width="500"
-      color="indigo lighten-4"
+      color="indigo lighten-5"
       v-for="item in teachers"
       :key="item.id"
-      class="pa-3 ma-3 "
+      class="pa-3 ma-3"
     >
-      <div class="d-flex flex-no-wrap justify-space-around">
-        <v-avatar class="profile rounded" tile size="120">
-          <v-img :src="item.avatar" alt="123"></v-img>
-          <!-- <span v-if="item.avatar">
-          </span> -->
-          <!-- <span v-else class="white--text headline">{{ initials(item) }}</span> -->
-        </v-avatar>
-
-        <div>
-          <v-card-title>{{ item.firstName }}</v-card-title>
+      <div class="d-flex flex-no-wrap align-center justify-space-around">
+        <div class="d-flex flex-column align-center">
+          <v-avatar class="profile rounded" tile size="150">
+            <v-img :src="item.avatar" alt="123"></v-img>
+            <!-- <span v-if="item.avatar">
+            </span>-->
+            <!-- <span v-else class="white--text headline">{{ initials(item) }}</span> -->
+          </v-avatar>
 
           <v-rating
             half-increments
@@ -27,6 +25,19 @@
             :half-icon="ratingIcons.halfIcon"
             v-model="item.rating"
           ></v-rating>
+        </div>
+
+        <div class="ml-3">
+
+          <v-card-title>{{ item.firstName }}</v-card-title>
+
+          <v-card-text>{{ item.description }}</v-card-text>
+
+          <div class="d-flex justify-end flex-shrink-1">
+            <v-btn>
+              <div class="text-caption" >Saber Mais</div>
+            </v-btn>
+          </div>
         </div>
       </div>
     </v-card>
@@ -47,27 +58,27 @@ export default {
         {
           firstName: "Rafael",
           lastName: "Moreira Queiroz",
-          // avatar: "https://i.pravatar.cc/500",
-          avatar:
-            "https://s.gravatar.com/avatar/68b08ba8f49c2c2ac47d238c3ac38fcb?s=150",
+          description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in tellus urna. Integer interdum iaculis feugiat. Vivamus venenatis libero ut.",
+          avatar: "https://randomuser.me/api/portraits/men/75.jpg",
           id: "teacher1",
           rating: 4.8
         },
         {
-          firstName: "Rafael",
-          lastName: "Moreira Queiroz",
-          // avatar: "https://i.pravatar.cc/500",
-          avatar:
-            "https://s.gravatar.com/avatar/68b08ba8f49c2c2ac47d238c3ac38fcb?s=150",
+          firstName: "Mirla",
+          lastName: "Vieira",
+          description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in tellus urna. Integer interdum iaculis feugiat. Vivamus venenatis libero ut.",
+          avatar: "https://i.pravatar.cc/150?img=32",
           id: "teacher2",
           rating: 4.8
         },
         {
-          firstName: "Rafael",
-          lastName: "Moreira Queiroz",
-          // avatar: "https://i.pravatar.cc/500",
-          avatar:
-            "https://s.gravatar.com/avatar/68b08ba8f49c2c2ac47d238c3ac38fcb?s=150",
+          firstName: "Paulo",
+          lastName: "Silva",
+          description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in tellus urna. Integer interdum iaculis feugiat. Vivamus venenatis libero ut.",
+          avatar: "https://i.pravatar.cc/150?img=7",
           id: "teacher3",
           rating: 4.8
         }
