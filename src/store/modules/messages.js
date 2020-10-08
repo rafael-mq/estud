@@ -1,45 +1,43 @@
-import messageService from '../../services/messageService'
+import messageService from "../../services/messageService";
 
 const state = {
   messages: []
-}
+};
 
 const getters = {
   messages: state => {
-    return state.messages
+    return state.messages;
   }
-}
+};
 
 const actions = {
-  getMessages ({ commit }) {
-    messageService.fetchMessages()
-    .then(messages => {
-      commit('setMessages', messages)
-    })
+  getMessages({ commit }) {
+    messageService.fetchMessages().then(messages => {
+      commit("setMessages", messages);
+    });
   },
   addMessage({ commit }, message) {
-    messageService.postMessage(message)
-    .then((data) => {
-      commit('addMessage', { ...message, pk: data.pk })
-    })
+    messageService.postMessage(message).then(data => {
+      commit("addMessage", { ...message, pk: data.pk });
+    });
   },
-  deleteMessage( { commit }, msgId) {
-    messageService.deleteMessage(msgId)
-    commit('deleteMessage', msgId)
+  deleteMessage({ commit }, msgId) {
+    messageService.deleteMessage(msgId);
+    commit("deleteMessage", msgId);
   }
-}
+};
 
 const mutations = {
-  setMessages (state, messages) {
-    state.messages = messages
+  setMessages(state, messages) {
+    state.messages = messages;
   },
   addMessage(state, message) {
-    state.messages.push(message)
+    state.messages.push(message);
   },
   deleteMessage(state, msgId) {
-    state.messages = state.messages.filter(obj => obj.pk !== msgId)
+    state.messages = state.messages.filter(obj => obj.pk !== msgId);
   }
-}
+};
 
 export default {
   namespaced: true,
@@ -47,4 +45,4 @@ export default {
   getters,
   actions,
   mutations
-}
+};

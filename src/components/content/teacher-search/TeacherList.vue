@@ -27,14 +27,13 @@
         </div>
 
         <div class="ml-3">
-
           <v-card-title>{{ item.firstName }}</v-card-title>
 
           <v-card-text>{{ item.description }}</v-card-text>
 
           <div class="d-flex justify-end flex-shrink-1">
             <v-btn>
-              <div class="text-caption" >Saber Mais</div>
+              <div class="text-caption">Saber Mais</div>
             </v-btn>
           </div>
         </div>
@@ -96,8 +95,7 @@ export default {
 </script>
 
 <style scoped>
-.card-list { 
-  max-width: 700px;;
+.card-list {
+  max-width: 700px;
 }
-
 </style>

@@ -1,15 +1,8 @@
 <template>
-  <v-navigation-drawer
-    app
-    v-model="drawer"
-    class="indigo lighten-1"
-    dark
-  >
+  <v-navigation-drawer app v-model="drawer" class="indigo lighten-1" dark>
     <v-app-bar color="indigo darken-1" flat>
       <template>
-        <v-app-bar-nav-icon
-          @click="toggleDrawer"
-        ></v-app-bar-nav-icon>
+        <v-app-bar-nav-icon @click="toggleDrawer"></v-app-bar-nav-icon>
       </template>
 
       <v-toolbar-title class="display-2 font-weight-bold">
@@ -165,7 +158,7 @@ export default {
   },
   methods: {
     toggleDrawer() {
-      console.log('oi');
+      console.log("oi");
       this.drawer = !this.drawer;
     },
     changeRoute(routeName) {
@@ -175,5 +168,4 @@ export default {
 };
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

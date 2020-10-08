@@ -17,7 +17,7 @@ export default {
     status: {
       default: "confirmed",
       type: String
-    },
+    }
   },
   data() {
     return {
@@ -41,7 +41,7 @@ export default {
           icon: "mdi-notebook-check-outline",
           backgroundColor: "#607D8B",
           text: "Finalizada"
-        },
+        }
       }
     };
   },
@@ -57,7 +57,7 @@ export default {
     },
     statusText: function() {
       return this.statusData[this.status].text;
-    },
+    }
   }
 };
 </script>
@@ -67,8 +67,8 @@ export default {
   height: 45px;
   width: 150px;
   color: white;
-  vertical-align: middle;  
+  vertical-align: middle;
   padding: 15px;
-  border-radius: 10px;  
+  border-radius: 10px;
 }
 </style>

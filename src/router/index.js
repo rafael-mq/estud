@@ -1,7 +1,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 // import Home from "../views/Home.vue";
-import StudenHome from "../views/StudentHome.vue"
+import StudenHome from "../views/StudentHome.vue";
 import TeacherSearch from "../views/TeacherSearch.vue";
 import Settings from "../views/Settings.vue";
 
@@ -18,12 +18,12 @@ const routes = [
   {
     path: "/search-teacher",
     name: "SearchTeacher",
-    component: TeacherSearch,
+    component: TeacherSearch
   },
   {
     path: "/student-dash",
     name: "StudenHome",
-    component: StudenHome,
+    component: StudenHome
   },
   {
     path: "/about",

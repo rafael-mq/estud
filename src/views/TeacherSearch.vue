@@ -7,7 +7,7 @@
 
       <SearchForm class="mb-2" />
 
-      <TeacherList/>
+      <TeacherList />
     </v-container>
   </div>
 </template>
@@ -24,5 +24,4 @@ export default {
 };
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

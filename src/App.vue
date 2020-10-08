@@ -3,17 +3,14 @@
     <!-- <v-app-bar app color="primary" dark></v-app-bar> -->
     <navigation />
 
-    <side-nav v-if="logged"/>
+    <side-nav v-if="logged" />
 
     <v-main transition="slide-x-transition">
       <router-view></router-view>
     </v-main>
 
     <v-footer height="60" class="grey">
-      <v-col
-        class="text-center"
-        cols="12"
-      >
+      <v-col class="text-center" cols="12">
         {{ new Date().getFullYear() }} — <strong>Estud App</strong>
       </v-col>
     </v-footer>

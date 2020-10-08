@@ -6,19 +6,25 @@
           <v-expansion-panel-header>
             <div class="d-flex align-center">
               <v-avatar size="80" max-width="80">
-                <v-img :src="item.teacher.avatar" :alt="item.teacher.name"></v-img>
+                <v-img
+                  :src="item.teacher.avatar"
+                  :alt="item.teacher.name"
+                ></v-img>
               </v-avatar>
 
-              <v-divider vertical class="ml-8"/>
+              <v-divider vertical class="ml-8" />
 
               <div class="ml-8 indigo--text text--accent-4">
-                <h2>{{item.subject}}</h2>
+                <h2>{{ item.subject }}</h2>
                 <h4 class="mt-4">{{ item.teacher.name }} - Hoje, 14hs</h4>
               </div>
 
-              <v-spacer/>
+              <v-spacer />
 
-              <class-status-tag :status="item.status" class="mr-8"></class-status-tag>
+              <class-status-tag
+                :status="item.status"
+                class="mr-8"
+              ></class-status-tag>
             </div>
           </v-expansion-panel-header>
 
@@ -30,12 +36,12 @@
 </template>
 
 <script>
-import ClassStatusTag from './ClassStatusTag.vue';
+import ClassStatusTag from "./ClassStatusTag.vue";
 
 export default {
   name: "class-list",
   components: {
-    ClassStatusTag,
+    ClassStatusTag
   },
   data() {
     return {
@@ -89,12 +95,11 @@ export default {
             name: "John Stewart",
             avatar: "https://randomuser.me/api/portraits/men/50.jpg"
           }
-        },
+        }
       ]
     };
-  },
+  }
 };
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

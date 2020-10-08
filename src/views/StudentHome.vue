@@ -11,7 +11,7 @@
           <class-list />
         </v-tab-item>
         <v-tab-item>
-          <class-calendar class="mx-8"/>
+          <class-calendar class="mx-8" />
         </v-tab-item>
       </v-tabs>
     </v-container>
@@ -30,11 +30,10 @@ export default {
   },
   data: () => {
     return {
-      tab: null,
+      tab: null
     };
   }
 };
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>
