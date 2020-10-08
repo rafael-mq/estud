@@ -1,13 +1,12 @@
 <template>
-  <div class="d-flex flex-wrap">
+  <div class="d-flex flex-column align-center">
     <v-card
-      width="500"
       color="indigo lighten-5"
       v-for="item in teachers"
       :key="item.id"
-      class="pa-3 ma-3"
+      class="pa-3 ma-3 card-list"
     >
-      <div class="d-flex flex-no-wrap align-center justify-space-around">
+      <div class="d-flex flex-no-wrap">
         <div class="d-flex flex-column align-center">
           <v-avatar class="profile rounded" tile size="150">
             <v-img :src="item.avatar" alt="123"></v-img>
@@ -69,7 +68,7 @@ export default {
           lastName: "Vieira",
           description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in tellus urna. Integer interdum iaculis feugiat. Vivamus venenatis libero ut.",
-          avatar: "https://i.pravatar.cc/150?img=32",
+          avatar: "https://randomuser.me/api/portraits/women/26.jpg",
           id: "teacher2",
           rating: 4.8
         },
@@ -78,7 +77,7 @@ export default {
           lastName: "Silva",
           description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in tellus urna. Integer interdum iaculis feugiat. Vivamus venenatis libero ut.",
-          avatar: "https://i.pravatar.cc/150?img=7",
+          avatar: "https://randomuser.me/api/portraits/men/78.jpg",
           id: "teacher3",
           rating: 4.8
         }
@@ -96,4 +95,9 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped>
+.card-list { 
+  max-width: 700px;;
+}
+
+</style>

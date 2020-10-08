@@ -1,16 +1,14 @@
 <template>
-  <div class="ma-10">
-    <center>
-      <h1 class="indigo--text">Encontre um professor próximo a você</h1>
-    </center>
-    <!-- div Search -->
-    <SearchForm />
+  <div>
+    <v-container>
+      <center>
+        <h1 class="my-5 indigo--text">Encontre um professor próximo a você</h1>
+      </center>
 
-    <!-- Lista de professores -->
-    <TeacherList/>
-    <!-- ... -->
-    <!-- card info professor -->
-    <!-- ... -->
+      <SearchForm class="mb-2" />
+
+      <TeacherList/>
+    </v-container>
   </div>
 </template>
 
@@ -18,7 +16,7 @@
 import SearchForm from "../components/content/teacher-search/SearchForm";
 import TeacherList from "../components/content/teacher-search/TeacherList";
 export default {
-  name: "TeacherSearch",
+  name: "teacher-search",
   components: {
     SearchForm,
     TeacherList
@@ -26,4 +24,5 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+</style>
